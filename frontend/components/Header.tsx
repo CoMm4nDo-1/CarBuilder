@@ -1,0 +1,1 @@
+export default function Header(){return <header className='border-b border-slate-800 p-4'><div className='max-w-7xl mx-auto flex justify-between'><h1 className='font-bold'>CarBuilder</h1><a className='text-sky-400' href='/pricing'>Pricing</a></div></header>}

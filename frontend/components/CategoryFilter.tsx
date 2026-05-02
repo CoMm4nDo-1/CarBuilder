@@ -1,0 +1,2 @@
+import {Category} from '../lib/types'
+export default function CategoryFilter({categories,active,onPick}:{categories:Category[];active:string;onPick:(slug:string)=>void}){return <div className='flex flex-wrap gap-2'>{[{slug:'',name:'All'},...categories].map((c:any)=><button key={c.slug||'all'} className={`px-3 py-1 rounded ${active===c.slug?'bg-sky-500':'bg-slate-800'}`} onClick={()=>onPick(c.slug)}>{c.name}</button>)}</div>}
