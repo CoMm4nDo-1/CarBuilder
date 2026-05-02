@@ -1,5 +1,2 @@
-*{box-sizing:border-box} body{font-family:Arial,sans-serif;margin:0;background:#f6f7fb;color:#111}
-.container{max-width:1200px;margin:0 auto;padding:16px}.grid{display:grid;grid-template-columns:1fr 320px;gap:16px}
-.card{background:#fff;border-radius:12px;padding:12px;border:1px solid #e5e7eb}.parts{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-button{background:#111;color:#fff;border:none;border-radius:8px;padding:8px 10px;cursor:pointer}.muted{color:#666;font-size:12px}
-.sidebar{position:sticky;top:12px;height:fit-content}
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-slate-950 text-slate-100}

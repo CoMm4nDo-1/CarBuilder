@@ -1,24 +1,15 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Optional
 
-
-class BuildListItemCreate(BaseModel):
+class BuildItemCreate(BaseModel):
     part_id: int
+    quantity: int = 1
 
+class BuildCreate(BaseModel):
+    title: str
+    car_id: int
+    description: Optional[str] = None
 
-class PartRead(BaseModel):
-    id: int
-    name: str
-    brand: str
-    category: str
-    price: float
-    image_url: Optional[str]
-    vendor: str
-    product_url: str
-    compatibility_notes: str
-    tags: List[str]
-
-
-class BuildListResponse(BaseModel):
-    items: list[dict]
-    total_cost: float
+class PaymentSessionRequest(BaseModel):
+    amount: int = 0
+    currency: str = 'usd'

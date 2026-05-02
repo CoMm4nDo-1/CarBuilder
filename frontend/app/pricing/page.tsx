@@ -1,0 +1,4 @@
+'use client'
+import Header from '../../components/Header'
+import {premiumSession} from '../../lib/api'
+export default function Pricing(){const go=async()=>alert(JSON.stringify(await premiumSession())); return <div><Header/><main className='max-w-4xl mx-auto p-6'><h1 className='text-3xl font-bold'>Pricing</h1><p className='text-slate-400'>Free tier includes core build planner. Premium will unlock saved build limits, alerts, exports, and advanced comparison.</p><div className='grid md:grid-cols-2 gap-4 mt-6'><div className='bg-slate-900 p-4 rounded border border-slate-800'><h2 className='font-semibold'>Free</h2><p>$0</p></div><div className='bg-slate-900 p-4 rounded border border-slate-800'><h2 className='font-semibold'>Premium</h2><p>Planned Stripe subscription</p><button className='mt-3 px-4 py-2 bg-sky-600 rounded' onClick={go}>Start Premium</button></div></div></main></div>}
